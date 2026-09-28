@@ -1,0 +1,4 @@
+# Preserve the distributed dataset's byte checksums on Windows checkouts.
+data/*.csv -text
+data/MOVIELENS_README.txt -text
+

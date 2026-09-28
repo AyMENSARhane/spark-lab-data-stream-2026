@@ -1,0 +1,14 @@
+.DS_Store
+.jj/
+.validation/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+artifacts/
+spark-warehouse/
+derby.log
+metastore_db/
+streaming/runtime/
+validation-results/
+
+dist/

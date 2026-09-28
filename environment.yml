@@ -1,0 +1,17 @@
+name: data-stream-spark
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - openjdk=17
+  - pip
+  - jupyterlab=4
+  - ipykernel=6
+  - pandas=2
+  - numpy=2
+  - matplotlib=3
+  - nbclient=0.10
+  - nbformat=5
+  - jupytext=1
+  - pip:
+      - pyspark>=4.0.1,<4.1
