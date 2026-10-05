@@ -70,6 +70,28 @@ The environment selects **Python 3.11, Java 17 and PySpark 4.0.1–4.0.x**.
 The checker and notebook select the environment's Java and Python
 automatically. No manual `JAVA_HOME`, `SPARK_HOME`, or `PATH` setup is needed.
 
+### 3. Windows only: Hadoop native files
+
+On Windows, the streaming exercises need two native Hadoop libraries,
+`winutils.exe` and `hadoop.dll`. Without them, the log shows
+`UnsatisfiedLinkError` and `NativeIO$Windows.access0`.
+
+In **Miniforge Prompt**:
+
+```bat
+mkdir C:\hadoop\bin
+curl -L -o C:\hadoop\bin\winutils.exe https://github.com/cdarlint/winutils/raw/master/hadoop-3.3.6/bin/winutils.exe
+curl -L -o C:\hadoop\bin\hadoop.dll https://github.com/cdarlint/winutils/raw/master/hadoop-3.3.6/bin/hadoop.dll
+dir C:\hadoop\bin
+```
+
+Then, in the same prompt, before the checker or Jupyter:
+
+```bat
+set HADOOP_HOME=C:\hadoop
+set PATH=%PATH%;C:\hadoop\bin
+```
+
 ## Starting the lab
 
 From the repository directory:
